@@ -1,0 +1,213 @@
+\hypertarget{class_database_handler}{\section{Database\-Handler Class Reference}
+\label{class_database_handler}\index{Database\-Handler@{Database\-Handler}}
+}
+
+
+{\ttfamily \#include $<$databasehandler.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_database_handler_ac27357d3431faf4fd6810483a24a43fd}{Database\-Handler} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_database_handler_ac27357d3431faf4fd6810483a24a43fd}{Database\-Handler\-::\-Database\-Handler} Constructor for the \hyperlink{class_database_handler}{Database\-Handler}. \end{DoxyCompactList}\item 
+Q\-Sql\-Query \hyperlink{class_database_handler_a0e128b134e4b0af836ec0a89538f25e6}{get\-All} (std\-::string table)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_database_handler_a0e128b134e4b0af836ec0a89538f25e6}{Database\-Handler\-::get\-All} Method to get all values in a S\-Q\-L table. \end{DoxyCompactList}\item 
+Q\-Sql\-Query \hyperlink{class_database_handler_af32dd20a5004d4654c2adfd621be1266}{search\-For\-Value} (std\-::string table, std\-::string column\-Want, std\-::string column\-Have, std\-::string data\-Have)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_database_handler_af32dd20a5004d4654c2adfd621be1266}{Database\-Handler\-::search\-For\-Value} Method to retrieve a specific value or set of values based a user provided query. \end{DoxyCompactList}\item 
+Q\-Sql\-Query \hyperlink{class_database_handler_ab8e5417394837310592fb245a69b4d68}{search\-For\-Non\-Repeating} (std\-::string table, std\-::string column\-Want)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_database_handler_ab8e5417394837310592fb245a69b4d68}{Database\-Handler\-::search\-For\-Non\-Repeating} Method that retrieves all values from a column or columns but discards any duplicate data. \end{DoxyCompactList}\item 
+Q\-Sql\-Query \hyperlink{class_database_handler_aaf839abfdb12f2b77ff93b5a03b6cf00}{search\-For\-Graphable} (std\-::string table, std\-::string column\-Want, std\-::string column\-Have1, std\-::string data\-Have1, std\-::string column\-Have2, std\-::string data\-Have2, std\-::string column\-Have3, std\-::string data\-Have3)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_database_handler_aaf839abfdb12f2b77ff93b5a03b6cf00}{Database\-Handler\-::search\-For\-Graphable} A method that searched for values based on three search parameters, intended for searching when city,year,subservice selected. \end{DoxyCompactList}\item 
+Q\-Sql\-Query \hyperlink{class_database_handler_a530e062d197922537cd189d2c6e9c25e}{search\-For\-Reg\-Ex} (std\-::string table, std\-::string column\-Want, std\-::string column\-Have, std\-::string data\-Have)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_database_handler_a530e062d197922537cd189d2c6e9c25e}{Database\-Handler\-::search\-For\-Reg\-Ex} A method to retrieve values from a table based on a regular expressions search. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 13 of file databasehandler.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_database_handler_ac27357d3431faf4fd6810483a24a43fd}{\index{Database\-Handler@{Database\-Handler}!Database\-Handler@{Database\-Handler}}
+\index{Database\-Handler@{Database\-Handler}!DatabaseHandler@{Database\-Handler}}
+\subsubsection[{Database\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}Database\-Handler\-::\-Database\-Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_database_handler_ac27357d3431faf4fd6810483a24a43fd}
+
+
+\hyperlink{class_database_handler_ac27357d3431faf4fd6810483a24a43fd}{Database\-Handler\-::\-Database\-Handler} Constructor for the \hyperlink{class_database_handler}{Database\-Handler}. 
+
+print an error if connection to db fails 
+
+Definition at line 12 of file databasehandler.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_database_handler_a0e128b134e4b0af836ec0a89538f25e6}{\index{Database\-Handler@{Database\-Handler}!get\-All@{get\-All}}
+\index{get\-All@{get\-All}!DatabaseHandler@{Database\-Handler}}
+\subsubsection[{get\-All}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Sql\-Query Database\-Handler\-::get\-All (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{table}
+\end{DoxyParamCaption}
+)}}\label{class_database_handler_a0e128b134e4b0af836ec0a89538f25e6}
+
+
+\hyperlink{class_database_handler_a0e128b134e4b0af836ec0a89538f25e6}{Database\-Handler\-::get\-All} Method to get all values in a S\-Q\-L table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+get all values from the database 
+
+Definition at line 31 of file databasehandler.\-cpp.
+
+\hypertarget{class_database_handler_aaf839abfdb12f2b77ff93b5a03b6cf00}{\index{Database\-Handler@{Database\-Handler}!search\-For\-Graphable@{search\-For\-Graphable}}
+\index{search\-For\-Graphable@{search\-For\-Graphable}!DatabaseHandler@{Database\-Handler}}
+\subsubsection[{search\-For\-Graphable}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Sql\-Query Database\-Handler\-::search\-For\-Graphable (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{table, }
+\item[{std\-::string}]{column\-Want, }
+\item[{std\-::string}]{column\-Have1, }
+\item[{std\-::string}]{data\-Have1, }
+\item[{std\-::string}]{column\-Have2, }
+\item[{std\-::string}]{data\-Have2, }
+\item[{std\-::string}]{column\-Have3, }
+\item[{std\-::string}]{data\-Have3}
+\end{DoxyParamCaption}
+)}}\label{class_database_handler_aaf839abfdb12f2b77ff93b5a03b6cf00}
+
+
+\hyperlink{class_database_handler_aaf839abfdb12f2b77ff93b5a03b6cf00}{Database\-Handler\-::search\-For\-Graphable} A method that searched for values based on three search parameters, intended for searching when city,year,subservice selected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & \\
+\hline
+{\em column\-Want} & \\
+\hline
+{\em column\-Have1} & \\
+\hline
+{\em data\-Have1} & \\
+\hline
+{\em column\-Have2} & \\
+\hline
+{\em data\-Have2} & \\
+\hline
+{\em column\-Have3} & \\
+\hline
+{\em data\-Have3} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+get all values from the database 
+
+Definition at line 113 of file databasehandler.\-cpp.
+
+\hypertarget{class_database_handler_ab8e5417394837310592fb245a69b4d68}{\index{Database\-Handler@{Database\-Handler}!search\-For\-Non\-Repeating@{search\-For\-Non\-Repeating}}
+\index{search\-For\-Non\-Repeating@{search\-For\-Non\-Repeating}!DatabaseHandler@{Database\-Handler}}
+\subsubsection[{search\-For\-Non\-Repeating}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Sql\-Query Database\-Handler\-::search\-For\-Non\-Repeating (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{table, }
+\item[{std\-::string}]{column\-Want}
+\end{DoxyParamCaption}
+)}}\label{class_database_handler_ab8e5417394837310592fb245a69b4d68}
+
+
+\hyperlink{class_database_handler_ab8e5417394837310592fb245a69b4d68}{Database\-Handler\-::search\-For\-Non\-Repeating} Method that retrieves all values from a column or columns but discards any duplicate data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & \\
+\hline
+{\em column\-Want} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+get all values from the database 
+
+Definition at line 138 of file databasehandler.\-cpp.
+
+\hypertarget{class_database_handler_a530e062d197922537cd189d2c6e9c25e}{\index{Database\-Handler@{Database\-Handler}!search\-For\-Reg\-Ex@{search\-For\-Reg\-Ex}}
+\index{search\-For\-Reg\-Ex@{search\-For\-Reg\-Ex}!DatabaseHandler@{Database\-Handler}}
+\subsubsection[{search\-For\-Reg\-Ex}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Sql\-Query Database\-Handler\-::search\-For\-Reg\-Ex (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{table, }
+\item[{std\-::string}]{column\-Want, }
+\item[{std\-::string}]{column\-Have, }
+\item[{std\-::string}]{data\-Have}
+\end{DoxyParamCaption}
+)}}\label{class_database_handler_a530e062d197922537cd189d2c6e9c25e}
+
+
+\hyperlink{class_database_handler_a530e062d197922537cd189d2c6e9c25e}{Database\-Handler\-::search\-For\-Reg\-Ex} A method to retrieve values from a table based on a regular expressions search. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & \\
+\hline
+{\em column\-Want} & \\
+\hline
+{\em column\-Have} & \\
+\hline
+{\em data\-Have} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+get all values from the database 
+
+Definition at line 83 of file databasehandler.\-cpp.
+
+\hypertarget{class_database_handler_af32dd20a5004d4654c2adfd621be1266}{\index{Database\-Handler@{Database\-Handler}!search\-For\-Value@{search\-For\-Value}}
+\index{search\-For\-Value@{search\-For\-Value}!DatabaseHandler@{Database\-Handler}}
+\subsubsection[{search\-For\-Value}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Sql\-Query Database\-Handler\-::search\-For\-Value (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{table, }
+\item[{std\-::string}]{column\-Want, }
+\item[{std\-::string}]{column\-Have, }
+\item[{std\-::string}]{data\-Have}
+\end{DoxyParamCaption}
+)}}\label{class_database_handler_af32dd20a5004d4654c2adfd621be1266}
+
+
+\hyperlink{class_database_handler_af32dd20a5004d4654c2adfd621be1266}{Database\-Handler\-::search\-For\-Value} Method to retrieve a specific value or set of values based a user provided query. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & \\
+\hline
+{\em column\-Want} & \\
+\hline
+{\em column\-Have} & \\
+\hline
+{\em data\-Have} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+get all values from the database 
+
+Definition at line 57 of file databasehandler.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{databasehandler_8h}{databasehandler.\-h}\item 
+src/\hyperlink{databasehandler_8cpp}{databasehandler.\-cpp}\end{DoxyCompactItemize}

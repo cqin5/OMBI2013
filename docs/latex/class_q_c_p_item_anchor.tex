@@ -1,0 +1,219 @@
+\hypertarget{class_q_c_p_item_anchor}{\section{Q\-C\-P\-Item\-Anchor Class Reference}
+\label{class_q_c_p_item_anchor}\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}}
+}
+
+
+An anchor of an item to which positions can be attached to.  
+
+
+
+
+{\ttfamily \#include $<$qcustomplot.\-h$>$}
+
+
+
+Inherited by \hyperlink{class_q_c_p_item_position}{Q\-C\-P\-Item\-Position}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_c_p_item_anchor_aeb6b681d2bf324db40a915d32ec5624f}{Q\-C\-P\-Item\-Anchor} (\hyperlink{class_q_custom_plot}{Q\-Custom\-Plot} $\ast$parent\-Plot, \hyperlink{class_q_c_p_abstract_item}{Q\-C\-P\-Abstract\-Item} $\ast$parent\-Item, const Q\-String \hyperlink{class_q_c_p_item_anchor_ac93984042a58c875e76847dc3e5f75fe}{name}, int anchor\-Id=-\/1)
+\item 
+virtual \hyperlink{class_q_c_p_item_anchor_a1868559407600688ee4d1a4621e81ceb}{$\sim$\-Q\-C\-P\-Item\-Anchor} ()
+\item 
+Q\-String \hyperlink{class_q_c_p_item_anchor_ac93984042a58c875e76847dc3e5f75fe}{name} () const 
+\item 
+virtual Q\-Point\-F \hyperlink{class_q_c_p_item_anchor_ae92def8f9297c5d73f5806c586517bb3}{pixel\-Point} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_q_c_p_item_position}{Q\-C\-P\-Item\-Position} $\ast$ \hyperlink{class_q_c_p_item_anchor_a688325bfb121b71b7c8260a6aec6d67f}{to\-Q\-C\-P\-Item\-Position} ()
+\item 
+void \hyperlink{class_q_c_p_item_anchor_ad11517e2ce5c2f9a798e78fb45e2e0d0}{add\-Child} (\hyperlink{class_q_c_p_item_position}{Q\-C\-P\-Item\-Position} $\ast$pos)
+\item 
+void \hyperlink{class_q_c_p_item_anchor_ab65ec61984575f737f43c2bb59dd0d76}{remove\-Child} (\hyperlink{class_q_c_p_item_position}{Q\-C\-P\-Item\-Position} $\ast$pos)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\-String \hyperlink{class_q_c_p_item_anchor_a23ad4d0ab0d2cbb41a7baf05bcf996ec}{m\-Name}
+\item 
+\hyperlink{class_q_custom_plot}{Q\-Custom\-Plot} $\ast$ \hyperlink{class_q_c_p_item_anchor_a59b968410831ba91a25cc75a77dde6f5}{m\-Parent\-Plot}
+\item 
+\hyperlink{class_q_c_p_abstract_item}{Q\-C\-P\-Abstract\-Item} $\ast$ \hyperlink{class_q_c_p_item_anchor_a80fad480ad3bb980446ed6ebc00818ae}{m\-Parent\-Item}
+\item 
+int \hyperlink{class_q_c_p_item_anchor_a00c62070333e8345976b579676ad3997}{m\-Anchor\-Id}
+\item 
+Q\-Set$<$ \hyperlink{class_q_c_p_item_position}{Q\-C\-P\-Item\-Position} $\ast$ $>$ \hyperlink{class_q_c_p_item_anchor_a5f0e67f395a63e2dd0e29ff1dcaf37b7}{m\-Children}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_q_c_p_item_anchor_aa9b8ddc062778e202a0be06a57d18d17}{Q\-C\-P\-Item\-Position}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An anchor of an item to which positions can be attached to. 
+
+An item (\hyperlink{class_q_c_p_abstract_item}{Q\-C\-P\-Abstract\-Item}) may have one or more anchors. Unlike \hyperlink{class_q_c_p_item_position}{Q\-C\-P\-Item\-Position}, an anchor doesn't control anything on its item, but provides a way to tie other items via their positions to the anchor.
+
+For example, a \hyperlink{class_q_c_p_item_rect}{Q\-C\-P\-Item\-Rect} is defined by its positions {\itshape top\-Left} and {\itshape bottom\-Right}. Additionally it has various anchors like {\itshape top}, {\itshape top\-Right} or {\itshape bottom\-Left} etc. So you can attach the {\itshape start} (which is a \hyperlink{class_q_c_p_item_position}{Q\-C\-P\-Item\-Position}) of a \hyperlink{class_q_c_p_item_line}{Q\-C\-P\-Item\-Line} to one of the anchors by calling \hyperlink{class_q_c_p_item_position_ac094d67a95d2dceafa0d50b9db3a7e51}{Q\-C\-P\-Item\-Position\-::set\-Parent\-Anchor} on {\itshape start}, passing the wanted anchor of the \hyperlink{class_q_c_p_item_rect}{Q\-C\-P\-Item\-Rect}. This way the start of the line will now always follow the respective anchor location on the rect item.
+
+Note that \hyperlink{class_q_c_p_item_position}{Q\-C\-P\-Item\-Position} derives from \hyperlink{class_q_c_p_item_anchor}{Q\-C\-P\-Item\-Anchor}, so every position can also serve as an anchor to other positions.
+
+To learn how to provide anchors in your own item subclasses, see the subclassing section of the \hyperlink{class_q_c_p_abstract_item}{Q\-C\-P\-Abstract\-Item} documentation. 
+
+Definition at line 1316 of file qcustomplot.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_q_c_p_item_anchor_aeb6b681d2bf324db40a915d32ec5624f}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}}
+\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{Q\-C\-P\-Item\-Anchor}]{\setlength{\rightskip}{0pt plus 5cm}Q\-C\-P\-Item\-Anchor\-::\-Q\-C\-P\-Item\-Anchor (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-Custom\-Plot} $\ast$}]{parent\-Plot, }
+\item[{{\bf Q\-C\-P\-Abstract\-Item} $\ast$}]{parent\-Item, }
+\item[{const Q\-String}]{name, }
+\item[{int}]{anchor\-Id = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{class_q_c_p_item_anchor_aeb6b681d2bf324db40a915d32ec5624f}
+Creates a new \hyperlink{class_q_c_p_item_anchor}{Q\-C\-P\-Item\-Anchor}. You shouldn't create \hyperlink{class_q_c_p_item_anchor}{Q\-C\-P\-Item\-Anchor} instances directly, even if you want to make a new item subclass. Use \hyperlink{class_q_c_p_abstract_item_af3fc92527802078ca395138748b629a7}{Q\-C\-P\-Abstract\-Item\-::create\-Anchor} instead, as explained in the subclassing section of the \hyperlink{class_q_c_p_abstract_item}{Q\-C\-P\-Abstract\-Item} documentation. 
+
+Definition at line 7064 of file qcustomplot.\-cpp.
+
+\hypertarget{class_q_c_p_item_anchor_a1868559407600688ee4d1a4621e81ceb}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!$\sim$\-Q\-C\-P\-Item\-Anchor@{$\sim$\-Q\-C\-P\-Item\-Anchor}}
+\index{$\sim$\-Q\-C\-P\-Item\-Anchor@{$\sim$\-Q\-C\-P\-Item\-Anchor}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{$\sim$\-Q\-C\-P\-Item\-Anchor}]{\setlength{\rightskip}{0pt plus 5cm}Q\-C\-P\-Item\-Anchor\-::$\sim$\-Q\-C\-P\-Item\-Anchor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_q_c_p_item_anchor_a1868559407600688ee4d1a4621e81ceb}
+
+
+Definition at line 7072 of file qcustomplot.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_q_c_p_item_anchor_ad11517e2ce5c2f9a798e78fb45e2e0d0}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!add\-Child@{add\-Child}}
+\index{add\-Child@{add\-Child}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{add\-Child}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Anchor\-::add\-Child (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Item\-Position} $\ast$}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_q_c_p_item_anchor_ad11517e2ce5c2f9a798e78fb45e2e0d0}
+
+
+Definition at line 7112 of file qcustomplot.\-cpp.
+
+\hypertarget{class_q_c_p_item_anchor_ac93984042a58c875e76847dc3e5f75fe}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!name@{name}}
+\index{name@{name}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Q\-C\-P\-Item\-Anchor\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_q_c_p_item_anchor_ac93984042a58c875e76847dc3e5f75fe}
+
+
+Definition at line 1323 of file qcustomplot.\-h.
+
+\hypertarget{class_q_c_p_item_anchor_ae92def8f9297c5d73f5806c586517bb3}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!pixel\-Point@{pixel\-Point}}
+\index{pixel\-Point@{pixel\-Point}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{pixel\-Point}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Point\-F Q\-C\-P\-Item\-Anchor\-::pixel\-Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_q_c_p_item_anchor_ae92def8f9297c5d73f5806c586517bb3}
+Returns the final absolute pixel position of the \hyperlink{class_q_c_p_item_anchor}{Q\-C\-P\-Item\-Anchor} on the \hyperlink{class_q_custom_plot}{Q\-Custom\-Plot} surface.
+
+The pixel information is internally retrieved via Q\-C\-P\-Abstract\-Item\-::anchor\-Pixel\-Position of the parent item, \hyperlink{class_q_c_p_item_anchor}{Q\-C\-P\-Item\-Anchor} is just an intermediary. 
+
+Reimplemented in \hyperlink{class_q_c_p_item_position_ae490f9c76ee2ba33752c495d3b6e8fb5}{Q\-C\-P\-Item\-Position}.
+
+
+
+Definition at line 7086 of file qcustomplot.\-cpp.
+
+\hypertarget{class_q_c_p_item_anchor_ab65ec61984575f737f43c2bb59dd0d76}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!remove\-Child@{remove\-Child}}
+\index{remove\-Child@{remove\-Child}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{remove\-Child}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Anchor\-::remove\-Child (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Item\-Position} $\ast$}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_q_c_p_item_anchor_ab65ec61984575f737f43c2bb59dd0d76}
+
+
+Definition at line 7126 of file qcustomplot.\-cpp.
+
+\hypertarget{class_q_c_p_item_anchor_a688325bfb121b71b7c8260a6aec6d67f}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!to\-Q\-C\-P\-Item\-Position@{to\-Q\-C\-P\-Item\-Position}}
+\index{to\-Q\-C\-P\-Item\-Position@{to\-Q\-C\-P\-Item\-Position}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{to\-Q\-C\-P\-Item\-Position}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Q\-C\-P\-Item\-Position}$\ast$ Q\-C\-P\-Item\-Anchor\-::to\-Q\-C\-P\-Item\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_q_c_p_item_anchor_a688325bfb121b71b7c8260a6aec6d67f}
+
+
+Reimplemented in \hyperlink{class_q_c_p_item_position_a577a7efc601df85a20b3e709d1ac320e}{Q\-C\-P\-Item\-Position}.
+
+
+
+Definition at line 1337 of file qcustomplot.\-h.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_q_c_p_item_anchor_aa9b8ddc062778e202a0be06a57d18d17}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}}
+\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{Q\-C\-P\-Item\-Position}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Q\-C\-P\-Item\-Position}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_q_c_p_item_anchor_aa9b8ddc062778e202a0be06a57d18d17}
+
+
+Definition at line 1346 of file qcustomplot.\-h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_q_c_p_item_anchor_a00c62070333e8345976b579676ad3997}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!m\-Anchor\-Id@{m\-Anchor\-Id}}
+\index{m\-Anchor\-Id@{m\-Anchor\-Id}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{m\-Anchor\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int Q\-C\-P\-Item\-Anchor\-::m\-Anchor\-Id\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_q_c_p_item_anchor_a00c62070333e8345976b579676ad3997}
+
+
+Definition at line 1333 of file qcustomplot.\-h.
+
+\hypertarget{class_q_c_p_item_anchor_a5f0e67f395a63e2dd0e29ff1dcaf37b7}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!m\-Children@{m\-Children}}
+\index{m\-Children@{m\-Children}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{m\-Children}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Set$<${\bf Q\-C\-P\-Item\-Position}$\ast$$>$ Q\-C\-P\-Item\-Anchor\-::m\-Children\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_q_c_p_item_anchor_a5f0e67f395a63e2dd0e29ff1dcaf37b7}
+
+
+Definition at line 1334 of file qcustomplot.\-h.
+
+\hypertarget{class_q_c_p_item_anchor_a23ad4d0ab0d2cbb41a7baf05bcf996ec}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!m\-Name@{m\-Name}}
+\index{m\-Name@{m\-Name}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{m\-Name}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Q\-C\-P\-Item\-Anchor\-::m\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_q_c_p_item_anchor_a23ad4d0ab0d2cbb41a7baf05bcf996ec}
+
+
+Definition at line 1328 of file qcustomplot.\-h.
+
+\hypertarget{class_q_c_p_item_anchor_a80fad480ad3bb980446ed6ebc00818ae}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!m\-Parent\-Item@{m\-Parent\-Item}}
+\index{m\-Parent\-Item@{m\-Parent\-Item}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{m\-Parent\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-C\-P\-Abstract\-Item}$\ast$ Q\-C\-P\-Item\-Anchor\-::m\-Parent\-Item\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_q_c_p_item_anchor_a80fad480ad3bb980446ed6ebc00818ae}
+
+
+Definition at line 1332 of file qcustomplot.\-h.
+
+\hypertarget{class_q_c_p_item_anchor_a59b968410831ba91a25cc75a77dde6f5}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!m\-Parent\-Plot@{m\-Parent\-Plot}}
+\index{m\-Parent\-Plot@{m\-Parent\-Plot}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{m\-Parent\-Plot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-Custom\-Plot}$\ast$ Q\-C\-P\-Item\-Anchor\-::m\-Parent\-Plot\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_q_c_p_item_anchor_a59b968410831ba91a25cc75a77dde6f5}
+
+
+Definition at line 1331 of file qcustomplot.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{qcustomplot_8h}{qcustomplot.\-h}\item 
+src/\hyperlink{qcustomplot_8cpp}{qcustomplot.\-cpp}\end{DoxyCompactItemize}

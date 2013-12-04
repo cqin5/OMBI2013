@@ -1,0 +1,26 @@
+How to run the project:
+1.  Open Qt Creator (2.7.0 based on Qt 5.0.1 64 bit) on mc10
+2.  Press file -> Open Project -> click project
+3.  Press Control + R to build and run the project.
+
+* You might need to configure the debugger folder, please see notes.
+
+Libraries used: 
+QCustomPlot
+
+
+
+
+*************************
+**********NOTES**********
+
+1. This project is currently in the process of merging multiple functionalities. 
+Therefore, in order to test all the available functions, please test both parts in src/ (part_one, and part_two)!
+
+2. In order for the relative paths to work, please configure the debug folders on the same level with the source code folders.
+E.g. 	src/
+			Projectv2/
+			build-Projectv2-Desktop-Debug/			
+*************************
+*************************
+

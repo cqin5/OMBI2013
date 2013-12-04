@@ -1,0 +1,7 @@
+Instructions to run this project:
+1.  Open Qt Creator (2.7.0 based on Qt 5.0.1 64 bit) on mc10
+2.  Press file -> Open Project -> click project
+3.  Press Control + R to build and run the project.
+
+Libraries used: 
+QCustomPlot

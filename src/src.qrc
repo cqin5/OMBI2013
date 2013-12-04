@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/ombi_logo_welcome.png</file>
+        <file>img/ombi_logo.png</file>
+    </qresource>
+</RCC>

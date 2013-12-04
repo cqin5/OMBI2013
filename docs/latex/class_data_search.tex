@@ -1,0 +1,202 @@
+\hypertarget{class_data_search}{\section{Data\-Search Class Reference}
+\label{class_data_search}\index{Data\-Search@{Data\-Search}}
+}
+
+
+{\ttfamily \#include $<$datasearch.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_data_search_aa889d58bfc809bce710b2a7bfec5c365}{Data\-Search} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_data_search_aa889d58bfc809bce710b2a7bfec5c365}{Data\-Search\-::\-Data\-Search} constructor for the data search class. \end{DoxyCompactList}\item 
+Q\-List$<$ Q\-String $>$ \hyperlink{class_data_search_a9cebb22e5b84c7f665fa2b597aa3bf76}{get\-Cities} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_data_search_a9cebb22e5b84c7f665fa2b597aa3bf76}{Data\-Search\-::get\-Cities} method that query's database handler for a list of all cities without repeats and passes the response as a Q\-List. \end{DoxyCompactList}\item 
+Q\-List$<$ Q\-String $>$ \hyperlink{class_data_search_afc4442612d6c9db33e09b902b8e4c2b6}{get\-Years} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_data_search_afc4442612d6c9db33e09b902b8e4c2b6}{Data\-Search\-::get\-Years} method that query's database handler for a list of all years without repeats and passes the response as a Q\-List. \end{DoxyCompactList}\item 
+Q\-List$<$ Q\-String $>$ \hyperlink{class_data_search_aeb4f2d34c2018370cf3bf3b735758483}{get\-Services} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_data_search_aeb4f2d34c2018370cf3bf3b735758483}{Data\-Search\-::get\-Services} method to create a Q\-List of human readable services. \end{DoxyCompactList}\item 
+Q\-List$<$ Q\-String $>$ \hyperlink{class_data_search_ae7a6351c6148a3d51a0e6fc7ddb4410e}{get\-Sub\-Directory} (Q\-String service)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_data_search_ae7a6351c6148a3d51a0e6fc7ddb4410e}{Data\-Search\-::get\-Sub\-Directory} method to get a Q\-List of all human readable subservices given a service. \end{DoxyCompactList}\item 
+Q\-List$<$ Q\-String $>$ \hyperlink{class_data_search_a9515f2d8b6d7832e01ea780cbbd3ddd4}{get\-Sub\-Directory\-Ref} (Q\-String service)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_data_search_a9515f2d8b6d7832e01ea780cbbd3ddd4}{Data\-Search\-::get\-Sub\-Directory\-Ref} method to get a Q\-List of all unique identifiers for subservices given a service. \end{DoxyCompactList}\item 
+Q\-Sql\-Query \hyperlink{class_data_search_a4b5e4bdfe01bd1f0e6b86629cce2cfa5}{search\-For\-Graphable} (std\-::string table, std\-::string column\-Want, std\-::string column\-Have1, std\-::string data\-Have1, std\-::string column\-Have2, std\-::string data\-Have2, std\-::string column\-Have3, std\-::string data\-Have3)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_data_search_a4b5e4bdfe01bd1f0e6b86629cce2cfa5}{Data\-Search\-::search\-For\-Graphable} A method that searched for values based on three search parameters, intended for searching when city,year,subservice selected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 16 of file datasearch.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_data_search_aa889d58bfc809bce710b2a7bfec5c365}{\index{Data\-Search@{Data\-Search}!Data\-Search@{Data\-Search}}
+\index{Data\-Search@{Data\-Search}!DataSearch@{Data\-Search}}
+\subsubsection[{Data\-Search}]{\setlength{\rightskip}{0pt plus 5cm}Data\-Search\-::\-Data\-Search (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_data_search_aa889d58bfc809bce710b2a7bfec5c365}
+
+
+\hyperlink{class_data_search_aa889d58bfc809bce710b2a7bfec5c365}{Data\-Search\-::\-Data\-Search} constructor for the data search class. 
+
+
+
+Definition at line 6 of file datasearch.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_data_search_a9cebb22e5b84c7f665fa2b597aa3bf76}{\index{Data\-Search@{Data\-Search}!get\-Cities@{get\-Cities}}
+\index{get\-Cities@{get\-Cities}!DataSearch@{Data\-Search}}
+\subsubsection[{get\-Cities}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$ Q\-String $>$ Data\-Search\-::get\-Cities (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_data_search_a9cebb22e5b84c7f665fa2b597aa3bf76}
+
+
+\hyperlink{class_data_search_a9cebb22e5b84c7f665fa2b597aa3bf76}{Data\-Search\-::get\-Cities} method that query's database handler for a list of all cities without repeats and passes the response as a Q\-List. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 15 of file datasearch.\-cpp.
+
+\hypertarget{class_data_search_aeb4f2d34c2018370cf3bf3b735758483}{\index{Data\-Search@{Data\-Search}!get\-Services@{get\-Services}}
+\index{get\-Services@{get\-Services}!DataSearch@{Data\-Search}}
+\subsubsection[{get\-Services}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$ Q\-String $>$ Data\-Search\-::get\-Services (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_data_search_aeb4f2d34c2018370cf3bf3b735758483}
+
+
+\hyperlink{class_data_search_aeb4f2d34c2018370cf3bf3b735758483}{Data\-Search\-::get\-Services} method to create a Q\-List of human readable services. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 32 of file datasearch.\-cpp.
+
+\hypertarget{class_data_search_ae7a6351c6148a3d51a0e6fc7ddb4410e}{\index{Data\-Search@{Data\-Search}!get\-Sub\-Directory@{get\-Sub\-Directory}}
+\index{get\-Sub\-Directory@{get\-Sub\-Directory}!DataSearch@{Data\-Search}}
+\subsubsection[{get\-Sub\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$ Q\-String $>$ Data\-Search\-::get\-Sub\-Directory (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{service}
+\end{DoxyParamCaption}
+)}}\label{class_data_search_ae7a6351c6148a3d51a0e6fc7ddb4410e}
+
+
+\hyperlink{class_data_search_ae7a6351c6148a3d51a0e6fc7ddb4410e}{Data\-Search\-::get\-Sub\-Directory} method to get a Q\-List of all human readable subservices given a service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 49 of file datasearch.\-cpp.
+
+\hypertarget{class_data_search_a9515f2d8b6d7832e01ea780cbbd3ddd4}{\index{Data\-Search@{Data\-Search}!get\-Sub\-Directory\-Ref@{get\-Sub\-Directory\-Ref}}
+\index{get\-Sub\-Directory\-Ref@{get\-Sub\-Directory\-Ref}!DataSearch@{Data\-Search}}
+\subsubsection[{get\-Sub\-Directory\-Ref}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$ Q\-String $>$ Data\-Search\-::get\-Sub\-Directory\-Ref (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{service}
+\end{DoxyParamCaption}
+)}}\label{class_data_search_a9515f2d8b6d7832e01ea780cbbd3ddd4}
+
+
+\hyperlink{class_data_search_a9515f2d8b6d7832e01ea780cbbd3ddd4}{Data\-Search\-::get\-Sub\-Directory\-Ref} method to get a Q\-List of all unique identifiers for subservices given a service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 58 of file datasearch.\-cpp.
+
+\hypertarget{class_data_search_afc4442612d6c9db33e09b902b8e4c2b6}{\index{Data\-Search@{Data\-Search}!get\-Years@{get\-Years}}
+\index{get\-Years@{get\-Years}!DataSearch@{Data\-Search}}
+\subsubsection[{get\-Years}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$ Q\-String $>$ Data\-Search\-::get\-Years (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_data_search_afc4442612d6c9db33e09b902b8e4c2b6}
+
+
+\hyperlink{class_data_search_afc4442612d6c9db33e09b902b8e4c2b6}{Data\-Search\-::get\-Years} method that query's database handler for a list of all years without repeats and passes the response as a Q\-List. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 24 of file datasearch.\-cpp.
+
+\hypertarget{class_data_search_a4b5e4bdfe01bd1f0e6b86629cce2cfa5}{\index{Data\-Search@{Data\-Search}!search\-For\-Graphable@{search\-For\-Graphable}}
+\index{search\-For\-Graphable@{search\-For\-Graphable}!DataSearch@{Data\-Search}}
+\subsubsection[{search\-For\-Graphable}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Sql\-Query Data\-Search\-::search\-For\-Graphable (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{table, }
+\item[{std\-::string}]{column\-Want, }
+\item[{std\-::string}]{column\-Have1, }
+\item[{std\-::string}]{data\-Have1, }
+\item[{std\-::string}]{column\-Have2, }
+\item[{std\-::string}]{data\-Have2, }
+\item[{std\-::string}]{column\-Have3, }
+\item[{std\-::string}]{data\-Have3}
+\end{DoxyParamCaption}
+)}}\label{class_data_search_a4b5e4bdfe01bd1f0e6b86629cce2cfa5}
+
+
+\hyperlink{class_data_search_a4b5e4bdfe01bd1f0e6b86629cce2cfa5}{Data\-Search\-::search\-For\-Graphable} A method that searched for values based on three search parameters, intended for searching when city,year,subservice selected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & \\
+\hline
+{\em column\-Want} & \\
+\hline
+{\em column\-Have1} & \\
+\hline
+{\em data\-Have1} & \\
+\hline
+{\em column\-Have2} & \\
+\hline
+{\em data\-Have2} & \\
+\hline
+{\em column\-Have3} & \\
+\hline
+{\em data\-Have3} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 74 of file datasearch.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{datasearch_8h}{datasearch.\-h}\item 
+src/\hyperlink{datasearch_8cpp}{datasearch.\-cpp}\end{DoxyCompactItemize}
